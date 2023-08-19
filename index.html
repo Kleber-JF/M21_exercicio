@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">JOHN WICK</h1>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__list__item">
+                    <a href="#">Filmes</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="#">Personagens</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="#">Onde assistir</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="#">Contato / Redes sociais</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="movies">
+        <h1>Filmes</h1>
+        <nav class="movies__tabs">
+            <button data-tab-button="wick1" class="movies__tabs__button movies__tabs__button--is-active">
+                John Wick 1
+            </button>
+            <button data-tab-button="wick2" class="movies__tabs__button">
+                John Wick 2
+            </button>
+            <button data-tab-button="wick3" class="movies__tabs__button">
+                John Wick 3
+            </button>
+            <button data-tab-button="wick4" class="movies__tabs__button">
+                John Wick 4
+            </button>
+        </nav>
+        <ul class="movies__tabs__list movies__tabs__list--is-active" data-tab-id="wick1">
+            <li class="movies__tabs__list__item">
+                <img src="./dist/images/john-wick-chapter-1-poster-2.jpg" alt="Disney+">
+                <div class="movie-text">
+                    <h3>
+                        John Wick 1
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <ul class="movies__tabs__list" data-tab-id="wick2">
+            <li class="movies__tabs__list__item">
+                <div class="movie-text">
+                    <h3>
+                        John Wick 2
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                </div>
+                <img src="./dist/images/john-wick-chapter-2-poster-3.jpg" alt="Disney+">
+            </li>
+        </ul>
+        <ul class="movies__tabs__list" data-tab-id="wick3">
+            <li class="movies__tabs__list__item">
+                <img src="./dist/images/john-wick-chapter-3-poster-1.jpg" alt="Disney+">
+                <div class="movie-text">
+                    <h3>
+                        John Wick 3
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <ul class="movies__tabs__list" data-tab-id="wick4">
+            <li class="movies__tabs__list__item">
+                <div class="movie-text">
+                    <h3>
+                        John Wick 4
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, facere. Consequuntur aliquid id odit ullam, repellat voluptatum tempore, doloribus numquam voluptas cumque accusamus exercitationem, amet saepe? Quaerat consectetur itaque saepe.
+                    </p>
+                </div>
+                <img src="./dist/images/john-wick-chapter-4-poster-1.jpg" alt="Disney+">
+            </li>
+        </ul>
+    </section>
+    <section class="characters">
+        <h1>Personagens</h1>
+        <ul class="characters__list">
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/john_wick.jpg" alt="keanu reeves">
+                        <div class="characters__text_container">
+                            <h4>John Wick</h4>
+                            <p>Keanu Reeves</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/helen.jpg" alt="Bridget Moynahan">
+                        <div class="characters__text_container">
+                            <h4>Helen</h4>
+                            <p>Bridget Moynahan</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/charon1.jpg" alt="Lance Reddick">
+                        <div class="characters__text_container">
+                            <h4>Charon</h4>
+                            <p>Lance Reddick</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/viggo.jpg" alt="Michael Nyqvist">
+                        <div class="characters__text_container">
+                            <h4>Viggo Tarasov</h4>
+                            <p>Michael Nyqvist</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/iosef.jpg" alt="Alfie Allen">
+                        <div class="characters__text_container">
+                            <h4>Iosef Tarasov</h4>
+                            <p>Alfie Allen</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/winston.jpg" alt="Ian Mcshane">
+                        <div class="characters__text_container">
+                            <h4>Winston</h4>
+                            <p>Ian Mcshane</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/perkins.jpg" alt="Adrianne Palicki">
+                        <div class="characters__text_container">
+                            <h4>Ms. Perkins</h4>
+                            <p>Adrianne Palicki</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/aurelio.jpg" alt="John Leguizamo">
+                        <div class="characters__text_container">
+                            <h4>Aurelio</h4>
+                            <p>John Leguizamo</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw1_cast/marcus.jpg" alt="Willem Dafoe">
+                        <div class="characters__text_container">
+                            <h4>Marcus</h4>
+                            <p>Willem Dafoe</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>

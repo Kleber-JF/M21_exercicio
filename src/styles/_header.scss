@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(145, 54, 54);
+
+    &__title {
+        padding: 24px;
+    }
+    &__nav {
+        
+        &__list {
+            padding: 16px;
+            
+            &__item {
+                display: inline;
+                padding: 8px;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
