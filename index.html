@@ -12,25 +12,28 @@
 <body>
     <header class="header">
         <h1 class="header__title">JOHN WICK</h1>
-        <nav class="header__nav">
-            <ul class="header__nav__list">
-                <li class="header__nav__list__item">
-                    <a href="#">Filmes</a>
-                </li>
-                <li class="header__nav__list__item">
-                    <a href="#">Personagens</a>
-                </li>
-                <li class="header__nav__list__item">
-                    <a href="#">Onde assistir</a>
-                </li>
-                <li class="header__nav__list__item">
-                    <a href="#">Contato / Redes sociais</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="header__nav__container">
+            <nav class="header__nav">
+                <button type="button" class="header__nav__button" id="botao-menu">Menu</button>
+                <ul class="header__nav__list" id="menu">
+                    <li class="header__nav__list__item">
+                        <a class="header__nav__link" href="#movies">Filmes</a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a class="header__nav__link" href="#characters">Personagens</a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a class="header__nav__link" href="#watch">Onde assistir</a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a class="header__nav__link" href="#social-links">Redes sociais</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="movies">
-        <h1>Filmes</h1>
+    <section class="movies" id="movies" data-nav-link-id="movies">
+        <h2>Filmes</h2>
         <nav class="movies__tabs">
             <button data-tab-button="wick1" class="movies__tabs__button movies__tabs__button--is-active">
                 John Wick 1
@@ -45,7 +48,7 @@
                 John Wick 4
             </button>
         </nav>
-        <ul class="movies__tabs__list movies__tabs__list--is-active" data-tab-id="wick1">
+        <ul class="movies__tabs__list list--is-active" data-movies-tab-id="wick1">
             <li class="movies__tabs__list__item">
                 <img src="./dist/images/john-wick-chapter-1-poster-2.jpg" alt="Disney+">
                 <div class="movie-text">
@@ -61,7 +64,7 @@
                 </div>
             </li>
         </ul>
-        <ul class="movies__tabs__list" data-tab-id="wick2">
+        <ul class="movies__tabs__list" data-movies-tab-id="wick2">
             <li class="movies__tabs__list__item">
                 <div class="movie-text">
                     <h3>
@@ -77,7 +80,7 @@
                 <img src="./dist/images/john-wick-chapter-2-poster-3.jpg" alt="Disney+">
             </li>
         </ul>
-        <ul class="movies__tabs__list" data-tab-id="wick3">
+        <ul class="movies__tabs__list" data-movies-tab-id="wick3">
             <li class="movies__tabs__list__item">
                 <img src="./dist/images/john-wick-chapter-3-poster-1.jpg" alt="Disney+">
                 <div class="movie-text">
@@ -93,7 +96,7 @@
                 </div>
             </li>
         </ul>
-        <ul class="movies__tabs__list" data-tab-id="wick4">
+        <ul class="movies__tabs__list" data-movies-tab-id="wick4">
             <li class="movies__tabs__list__item">
                 <div class="movie-text">
                     <h3>
@@ -110,9 +113,9 @@
             </li>
         </ul>
     </section>
-    <section class="characters">
-        <h1>Personagens</h1>
-        <ul class="characters__list">
+    <section class="characters" id="characters" data-nav-link-id="characters">
+        <h2>Personagens</h2>
+        <ul class="characters__list list--is-active" data-characters-tab-id="wick1">
             <li class="characters__list__item">
                 <div class="characters__profile">
                     <a href="">
@@ -213,7 +216,524 @@
                 </div>
             </li>
         </ul>
+        <ul class="characters__list" data-characters-tab-id="wick2">
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/john_wick.jpg" alt="Keanu Reeves">
+                        <div class="characters__text_container">
+                            <h4>John Wick</h4>
+                            <p>Keanu Reeves</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/bowery_king.jpg" alt="Laurence Fishburne">
+                        <div class="characters__text_container">
+                            <h4>The Bowery King</h4>
+                            <p>Laurence Fishburne</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/santino.jpg" alt="Riccardo Scamarcio">
+                        <div class="characters__text_container">
+                            <h4>Santino D'Antonio</h4>
+                            <p>Riccardo Scamarcio</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/ares.jpg" alt="Ruby Rose">
+                        <div class="characters__text_container">
+                            <h4>Ares</h4>
+                            <p>Ruby Rose</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/winston.jpg" alt="Ian Mcshane">
+                        <div class="characters__text_container">
+                            <h4>Winston</h4>
+                            <p>Ian Mcshane</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/charon.jpg" alt="Lance Reddick">
+                        <div class="characters__text_container">
+                            <h4>Charon</h4>
+                            <p>Lance Reddick</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/cassian.jpg" alt="Common">
+                        <div class="characters__text_container">
+                            <h4>Cassian</h4>
+                            <p>Common</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/gianna.jpg" alt="Claudia Gerini">
+                        <div class="characters__text_container">
+                            <h4>Gianna D'Antonio</h4>
+                            <p>Claudia Gerini</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/julius.jpg" alt="Franco Nero">
+                        <div class="characters__text_container">
+                            <h4>Julius</h4>
+                            <p>Franco Nero</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/the-cartographer.jpg" alt="Simon Spinazze">
+                        <div class="characters__text_container">
+                            <h4>The Cartographer</h4>
+                            <p>Simon Spinazze</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/the-sommelier.jpg" alt="Peter Serafinowitcz">
+                        <div class="characters__text_container">
+                            <h4>The Sommelier</h4>
+                            <p>Peter Serafinowitcz</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/the-tailor.jpg" alt="Luca Mosca">
+                        <div class="characters__text_container">
+                            <h4>The Tailor</h4>
+                            <p>Luca Mosca</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/abram.jpg" alt="Peter Stormare">
+                        <div class="characters__text_container">
+                            <h4>Abram Tarasov</h4>
+                            <p>Peter Stormare</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw2_cast/earl.jpg" alt="Tobias Segal">
+                        <div class="characters__text_container">
+                            <h4>Earl</h4>
+                            <p>Tobias Segal</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="characters__list" data-characters-tab-id="wick3">
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/john_wick (1).jpg" alt="Keanu Reeves">
+                        <div class="characters__text_container">
+                            <h4>John Wick</h4>
+                            <p>Keanu Reeves</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/sofia.jpg" alt="Halle Berry">
+                        <div class="characters__text_container">
+                            <h4>Sofia</h4>
+                            <p>Halle Berry</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/zero.jpg" alt="Mark Dacascos">
+                        <div class="characters__text_container">
+                            <h4>Zero</h4>
+                            <p>Mark Dacascos</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/the_adjudicator.jpg" alt="Asia Kate Dillon">
+                        <div class="characters__text_container">
+                            <h4>Adjudicator</h4>
+                            <p>Asia Kate Dillon</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/winston.jpg" alt="Ian Mcshane">
+                        <div class="characters__text_container">
+                            <h4>Winston</h4>
+                            <p>Ian Mcshane</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/charon.jpg" alt="Lance Reddick">
+                        <div class="characters__text_container">
+                            <h4>Charon</h4>
+                            <p>Lance Reddick</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/the_director.jpg" alt="Angelic Huston">
+                        <div class="characters__text_container">
+                            <h4>The Director</h4>
+                            <p>Angelic Huston</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/the-elder.jpg" alt="Said Tagmaoui">
+                        <div class="characters__text_container">
+                            <h4>The Elder</h4>
+                            <p>Said Tagmaoui</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/berrada.jpg" alt="Jerome Flynn">
+                        <div class="characters__text_container">
+                            <h4>Berrada</h4>
+                            <p>Jerome Flynn</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/ernest.jpg" alt="Boban Marjanovic">
+                        <div class="characters__text_container">
+                            <h4>Ernest</h4>
+                            <p>Boban Marjanovic</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/tick-tock-man.jpg" alt="Jason Mantzoukas">
+                        <div class="characters__text_container">
+                            <h4>Tick Tock Man</h4>
+                            <p>Jason Mantzoukas</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/zeros-students.jpg" alt="Luca Mosca">
+                        <div class="characters__text_container">
+                            <h4>Zero's Students</h4>
+                            <p>Cecep & Yayan</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw3_cast/the-doctor.jpg" alt="Randall Duk Kim">
+                        <div class="characters__text_container">
+                            <h4>The Doctor</h4>
+                            <p>Randall Duk Kim</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="characters__list" data-characters-tab-id="wick4">
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/john-wick.jpg" alt="Keanu Reeves">
+                        <div class="characters__text_container">
+                            <h4>John Wick</h4>
+                            <p>Keanu Reeves</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/caine.jpg" alt="Donnie Yen">
+                        <div class="characters__text_container">
+                            <h4>Caine</h4>
+                            <p>Donnie Yen</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/the-marquis.jpg" alt="Bill Skarsgard">
+                        <div class="characters__text_container">
+                            <h4>The Marquis</h4>
+                            <p>Bill Skarsgard</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/bowery-king.jpg" alt="Laurance Fishburne">
+                        <div class="characters__text_container">
+                            <h4>The Bowery King</h4>
+                            <p>Laurance Fishburne</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/shimazu.jpg" alt="Hiroyuki Sanada">
+                        <div class="characters__text_container">
+                            <h4>Shimazu</h4>
+                            <p>Hiroyuki Sanada</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/the-tracker.jpg" alt="Shamier Anderson">
+                        <div class="characters__text_container">
+                            <h4>The Tracker</h4>
+                            <p>Shamier Anderson</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/charon.jpg" alt="Lance Reddick">
+                        <div class="characters__text_container">
+                            <h4>Charon</h4>
+                            <p>Lance Reddick</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/akira.jpg" alt="Rina Sawayama">
+                        <div class="characters__text_container">
+                            <h4>Akira</h4>
+                            <p>Rina Sawayama</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/killa.jpg" alt="Scott Adkins">
+                        <div class="characters__text_container">
+                            <h4>Killa</h4>
+                            <p>Scott Adkins</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/harbinger.jpg" alt="Clancy Brown">
+                        <div class="characters__text_container">
+                            <h4>The Harbinger</h4>
+                            <p>Clancy Brown</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/katia.jpg" alt="Natalia Tena">
+                        <div class="characters__text_container">
+                            <h4>Katia</h4>
+                            <p>Natalia Tena</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/chidi.jpg" alt="Marko Zaror">
+                        <div class="characters__text_container">
+                            <h4>Chidi</h4>
+                            <p>Marko Zaror</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="characters__list__item">
+                <div class="characters__profile">
+                    <a href="">
+                        <img src="./dist/images/jw4_cast/winston.jpg" alt="Ian Mcshane">
+                        <div class="characters__text_container">
+                            <h4>Winston</h4>
+                            <p>Ian Mcshane</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
     </section>
+    <section class="onde_assistir" id="watch" data-nav-link-id="watch">
+        <h2>Onde assistir</h2>
+        <div class="onde-assistir__container">
+            <ul class="onde-assistir__list">
+                <li class="onde-assistir__list__item">
+                    <h3>Incluído no serviço:</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./dist/images/plataformas/telecine.png" alt="telecine">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./dist/images/plataformas/paramount.png" alt="paramount">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="onde-assistir__list__item">
+                    <h3>Para alugar ou comprar:</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./dist/images/plataformas/apple.png" alt="apple">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./dist/images/plataformas/prime_video.png" alt="prime-video">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./dist/images/plataformas/google_films.png" alt="google films">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="social" id="social-links" data-nav-link-id="social-links">
+        <h2 class="social__title">Redes sociais</h2>
+        <ul class="social__list">
+            <li class="social__list__item">
+                <a href="">
+                    <img src="./dist/images/media/facebook.png" alt="facebook">
+                </a>
+            </li>
+            <li class="social__list__item">
+                <a href="">
+                    <img src="./dist/images/media/instagram.png" alt="instagram">
+                </a>
+            </li>
+            <li class="social__list__item">
+                <a href="">
+                    <img src="./dist/images/media/twitter.png" alt="twitter">
+                </a>
+            </li>
+            <li class="social__list__item">
+                <a href="">
+                    <img src="./dist/images/media/youtube.png" alt="you tube">
+                </a>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <h5>LIONSGATE</h5>
+        <P>ⓒ 2023 Lions Gate Entertainment Inc. and affiliated companies. All Rights Reserved.</P>
+    </footer>
     <script src="./dist/js/main.js"></script>
 </body>
 </html>

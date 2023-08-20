@@ -1,16 +1,17 @@
 .movies {
-    background-color: rgba($color: #000000, $alpha: .4);
-
-    h1 {
-        text-align: center;
-        padding-top: 32px;
-        font-size: 56px;
+    padding-top: 200px;
+    @media (max-width: 1023px) {
+        padding-top: 100px;
     }
-
     &__tabs {
+        position: sticky;
+        top: 0;
+        left: 0;
         display: flex;
-        padding: 16px;
+        padding: 8px;
         justify-content: center;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+
 
         &__button {
             width: 240px;
@@ -23,6 +24,11 @@
             cursor: pointer;
             margin: 0;
             transition: ease .5s;
+
+            
+            @media (max-width: 1023px) {
+                font-size: 20px;
+            }
 
             &--is-active {
                 border: none;
@@ -43,26 +49,47 @@
                 padding: 5.6vh;
                 align-items: center;
                 justify-content: space-around;
-                color: #fff;;
+                color: #fff;
+
+                @media (max-width: 1023px) {
+                    display: block;
+                    width: 70%;
+                    margin: auto;
+                }
                 
                 div {
                     width: 30%;
                     text-align: center;
 
+                    @media (max-width: 1023px) {
+                        width: 100%;
+                    }
+
                     h3 {
                         font-size: 36px;
+
+                        @media (max-width: 1023px) {
+                            padding-top: 16px;
+                        }
                     }
 
                     p {
                         text-align: left;
-                        padding-top: 16px;
+                        padding: 16px 0;
                         font-size: 24px;
+                        @media (max-width: 767px) {
+                            font-size: 18px;
+                        }
                     }
                 }
 
                 img {
                     max-height: auto;
                     width: 30%;
+
+                    @media (max-width: 1023px) {
+                        width: 100%;
+                    }
                 }
             }
         }

@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
     const buttons = document.querySelectorAll('[data-tab-button]');
+    const menuButton = document.getElementById('botao-menu');
+    
+    menuButton.addEventListener('click', openCloseMenu);
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(button){
             const tabsTarget = button.target.dataset.tabButton;
-            const tab = document.querySelector(`[data-tab-id=${tabsTarget}]`);
+            const tabMovies = document.querySelector(`[data-movies-tab-id=${tabsTarget}]`);
+            const tabCharacters = document.querySelector(`[data-characters-tab-id=${tabsTarget}]`);
             hideAllTabs();
-            tab.classList.add('movies__tabs__list--is-active');
+            tabMovies.classList.add('list--is-active');
+            tabCharacters.classList.add('list--is-active');
             removeActiveButton();
             button.target.classList.add('movies__tabs__button--is-active');
         })
@@ -14,10 +19,15 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 function hideAllTabs() {
-    const tabsContainer = document.querySelectorAll('[data-tab-id]');
+    const tabsContainerMovies = document.querySelectorAll('[data-movies-tab-id]');
+    const tabsContainerCharacters = document.querySelectorAll('[data-characters-tab-id]');
 
-    for (let i = 0; i < tabsContainer.length; i++) {
-        tabsContainer[i].classList.remove('movies__tabs__list--is-active');
+    for (let i = 0; i < tabsContainerMovies.length; i++) {
+        tabsContainerMovies[i].classList.remove('list--is-active');
+    }
+
+    for (let i = 0; i < tabsContainerCharacters.length; i++) {
+        tabsContainerCharacters[i].classList.remove('list--is-active');
     }
 }
 
@@ -26,4 +36,9 @@ function removeActiveButton() {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('movies__tabs__button--is-active');
     }
+}
+
+function openCloseMenu() {
+    const menuList = document.getElementById('menu');
+    menuList.classList.toggle('--is-closed');
 }
